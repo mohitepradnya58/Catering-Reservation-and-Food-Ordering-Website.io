@@ -216,6 +216,7 @@
     var cartJSON = JSON.stringify(cartArray);
     sessionStorage.setItem('shopping-cart', cartJSON);
     showCartTable();
+    cartIsEmpty();
   }
 
   function emptyCart() {
@@ -261,11 +262,39 @@
     $('#itemCount').text(itemCount);
     $('#totalAmount').text("$" + grandTotal.toFixed(2));
   }
-  let placeorder = document.getElementById('place-order');
-  
-    placeorder.addEventListener('click', function(){
-   alert("Your Order Is Placed Successfully");
-  });
+ 
+
+
+
+  function cartIsEmpty() {
+    var table = document.getElementById("tableId");
+    var totalRowCount = table.rows.length; // 5
+   
+    var tbodyRowCount = table.tBodies[0].rows.length; // 3
+if(tbodyRowCount > 0) {
+    alert("Your order has been placed successfully!");
+   }
+else{
+     alert("Your cart is empty. Please add items to your cart before placing an order.");
+   }
+    return true; 
+};
+
+//login function
+function auth(event) {
+  event.preventDefault();
+
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  if (email === "admin@gmail.com" && password === "user") {
+    alert("You Have Login Successfully!")
+       window.location.replace("/index.html");
+  } else {
+      alert("Invalid Details. Please Try Again!");
+      return;
+  }
+}
 
   
   

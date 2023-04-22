@@ -117,6 +117,7 @@
               >Empty Cart</a
             >
             <table
+              id="tableId"
               class="tbl-cart table-bordered mt-3 mb-3"
               cellpadding="10"
               cellspacing="1"
@@ -130,7 +131,11 @@
                 </tr>
               </thead>
               <!--  Cart table to load data on "add to cart" action -->
-              <tbody id="cartTableBody" class="text-center"></tbody>
+              <tbody
+                id="cartTableBody"
+                class="text-center"
+                id="cartItem"
+              ></tbody>
               <tfoot>
                 <tr>
                   <td class="text-right">Total:</td>
@@ -145,6 +150,7 @@
             <div class="col-lg-10"></div>
             <div class="col-lg-2">
               <button
+                onclick="cartIsEmpty()"
                 type="submit"
                 class="btn btn-primary mb-3"
                 id="place-order"

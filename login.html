@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Login Catering Reservation and Food Ordering Website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -84,7 +85,7 @@
           </div>
 
           <div class="input-box">
-            <span class="material-icons icon"> https </span>
+            <span class="material-icons icon">eye</span>
             <input type="password" name="password" id="password" required />
             <label>password</label>
           </div>
@@ -98,7 +99,9 @@
             <p>Dont't have an Account? <a href="signup.html">Register</a></p>
           </div>
 
-          <button type="submit" class="login-button">Login</button>
+          <button type="submit" class="login-button" onclick="auth(event)">
+            Login
+          </button>
         </form>
       </div>
     </div>
@@ -123,7 +126,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script> -->
     <script src="index.js"></script>
   </body>
 </html>
